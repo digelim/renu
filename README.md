@@ -4,6 +4,11 @@ This is a personal project for a mobile app. I use a credit card myself together
 
 url: https://play.google.com/store/apps/details?id=com.renu
 
+
+
+Designed and developed by Diogo Angelim.
+
+
 # Routes
 I this app, basically there are four routes: "statistics", "login", "edit" and "start". I also used moment package with flow-router to provide a good UX with page transitions.
 
@@ -18,12 +23,3 @@ In this screen, I used the Accounts package to handle and authenticate users thr
 
 ## Edit
 User can create/edit a transaction in this screen.
-
-
-
-
-
-Designed and developed by Diogo Angelim.
-
-
-
