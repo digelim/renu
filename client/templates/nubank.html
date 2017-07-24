@@ -1,0 +1,40 @@
+<template name="nubank">
+  {{#contentWrapper}}
+    <div class="view nubank-view">
+      <div class="page">
+        <div class="page-content">
+          <div class="content-block-title">Entrar com</div>
+          <div class="content-block">
+            <div class="card">
+              <div class="card-header">
+                <img src="img/nu-white.png" alt="NuBank" />
+              </div>
+              <div class="card-content">
+                <div class="card-content-inner login-box">
+                  <div class="credentials">
+                    <form>
+  	                   <fieldset class="login">
+                          <div class="cpf-field">
+                            <input name="cpf" maxlength="14" type="tel" placeholder="" required/>
+                            <hr>
+                            <label>cpf</label>
+                          </div>
+                          <div class="password-field">
+                            <input name="password" type="password" placeholder="" required/>
+                            <hr>
+                            <label>senha</label>
+                          </div>
+                          <span class="errormsg">CPF ou senha inválidos.</span>
+                          <a href="#" class="button button-big button-login-nubank">entrar</a>
+  	                    </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/contentWrapper}}
+</template>

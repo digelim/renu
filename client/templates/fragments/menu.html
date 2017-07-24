@@ -1,0 +1,31 @@
+<template name="menu">
+  <div class="panel panel-left panel-reveal">
+    <div class="menu__main">
+      <h1>Em caixa<br>{{balance}}</h1>
+      {{#unless limit.infinity}}
+      <div id="spending-limit">
+        <div id="percent" style="width: {{limit.width}}%"></div>
+      </div>
+      <span class="limit-description">{{limit.value}}% de gastos este mês</span>
+      {{else}}
+        {{#unless hasRevenue}}
+          <span class="balance-tip">Dica: adicione receitas até que o saldo em caixa seja igual ao total da sua conta bancária.</span>
+        {{/unless}}
+      {{/unless}}
+    </div>
+    <div class="menu__categories">
+      <ul>
+        {{#each categoryList}}
+          {{#if this.total}}
+          <li><div class="legend" style="background: {{this.color}};">
+
+          </div>{{this.name}} <div style="opacity: 0.3; text-align: right; display: inline;">
+            {{this.total}}
+          </div></li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+
+  </div>
+</template>

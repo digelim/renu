@@ -1,0 +1,42 @@
+<template name="navbar">
+  <div class="navbar {{#if isAdd}}navbar-add{{/if}}">
+    <div class="navbar-controls">
+      <div class="pull-left">
+        <div class="icon-left">
+          {{#unless isAdd}}
+          <a href="#" class="open-panel">
+            <img src="img/menu.svg" alt="Menu"/>
+          </a>
+          {{else}}
+
+          <a href="/" class="back">
+            <img src="img/back.svg" alt="Voltar"/>
+          </a>
+          {{/unless}}
+        </div>
+      </div>
+      {{#unless isAdd}}
+      <div class="pull-right">
+        <div class="icons-right">
+          {{#if isHome}}
+          <a href="/statistics">
+            <img src="img/chart.svg" alt="Estatísticas" />
+          </a>
+          {{else}}
+          <a href="/">
+            <img src="img/home.svg" alt="Início" />
+          </a>
+          {{/if}}
+          <a href="#"  style="margin-left: 15px;" data-popup=".popup-settings" class="open-popup">
+            <img src="img/gear.svg" alt="Configurações" />
+          </a>
+        </div>
+      </div>
+      {{else}}
+      <div class="navbar-title">
+        {{#unless isModify}} Adicionar {{else}} Editar {{/unless}} {{transaction}}
+      </div>
+      {{/unless}}
+    </div>
+  </div>
+</template>

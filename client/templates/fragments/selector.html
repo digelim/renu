@@ -1,0 +1,32 @@
+<template name="selector">
+  <div class="selector">
+    <div class="heading">
+      <h1>{{title}}</h1>
+      <div class="year">
+        <a href="#" id="previous">
+          <img src="img/left-arrow.svg" alt="Antes"/>
+        </a>
+        <span>{{currentYear}}</span>
+        <a href="#" id="next">
+          <img src="img/right-arrow.svg" alt="Depois"/>
+        </a>
+      </div>
+    </div>
+    <div id="months" class="dragdealer months-wrapper">
+      <ul class="handle">
+        <li data-month="Jan" class="month {{isCurrentMonth 'Jan'}}">janeiro</li>
+        <li data-month="Feb" class="month {{isCurrentMonth 'Feb'}}">fevereiro</li>
+        <li data-month="Mar" class="month {{isCurrentMonth 'Mar'}}">março</li>
+        <li data-month="Apr" class="month {{isCurrentMonth 'Apr'}}">abril</li>
+        <li data-month="May" class="month {{isCurrentMonth 'May'}}">maio</li>
+        <li data-month="Jun" class="month {{isCurrentMonth 'Jun'}}">junho</li>
+        <li data-month="Jul" class="month {{isCurrentMonth 'Jul'}}">julho</li>
+        <li data-month="Ago" class="month {{isCurrentMonth 'Ago'}}">agosto</li>
+        <li data-month="Sep" class="month {{isCurrentMonth 'Sep'}}">setembro</li>
+        <li data-month="Oct" class="month {{isCurrentMonth 'Oct'}}">outubro</li>
+        <li data-month="Nov" class="month {{isCurrentMonth 'Nov'}}">novembro</li>
+        <li data-month="Dec" class="month {{isCurrentMonth 'Dec'}}">dezembro</li>
+      </ul>
+    </div>
+  </div>
+</template>

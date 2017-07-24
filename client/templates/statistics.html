@@ -1,0 +1,41 @@
+<template name="statistics">
+  {{#contentWrapper}}
+  <div class="view swiper-view">
+    <div class="page navbar-fixed">
+
+      <div class="page-content">
+        {{> selector title="Estatísticas"}}
+        {{> filter}}
+        {{#if isConnected}}
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              {{#if hasData "pieChart"}}
+              <div id="pieChart">
+                <svg></svg>
+              </div>
+              {{else}}
+                {{> nodata image="nodata.svg"}}
+              {{/if}}
+            </div>
+            <div class="swiper-slide">
+              {{#if hasData "lineChart"}}
+              <div id="nvd3-line2" data-line-color="master" data-area-color="master" data-point-color="white" data-x-grid="false" data-points="true" data-stroke-width="1" class="line-chart">
+                <svg></svg>
+              </div>
+              {{else}}
+                {{> nodata image="nodata.svg"}}
+              {{/if}}
+            </div>
+          </div>
+          <div class="swiper-pagination color-white"></div>
+        </div>
+        {{else}}
+          {{> nodata image="sad_satelite.png"}}
+        {{/if}}
+
+      </div>
+    </div>
+  </div>
+  {{/contentWrapper}}
+</template>

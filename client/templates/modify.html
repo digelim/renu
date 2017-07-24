@@ -1,0 +1,68 @@
+<template name="modify">
+  {{#contentWrapper}}
+  <div class="view add-view">
+    <div class="page navbar-fixed">
+
+      <div class="page-content">
+
+        <div class="list-block add-list">
+          <ul>
+            <li><div class="item-content">
+              <div class="item-inner">
+                <input type="tel" name="value" value="{{item.price}}" placeholder="Valor" />
+                <div class="item-after"><i class="f7-icons">money_dollar</i></div>
+              </div>
+            </div>
+          </li>
+            <li><div class="item-content">
+              <div class="item-inner">
+                <input type="text" name="place" value="{{item.description}}" placeholder="Local" />
+                <div class="item-after"><i class="f7-icons">world</i></div>
+              </div>
+            </div>
+          </li>
+            <li>
+
+              <a href="#" class="item-link smart-select" data-back-on-select="true" data-popup-close-text="Fechar" data-open-in="popup">
+                <select name="categories">
+
+                  {{#each categories}}
+                    {{#if isSelected}}
+                    <option value="{{this}}" selected>{{this}}</option>
+                    {{updateCategory}}
+                    {{else}}
+                    <option value="{{this}}">{{this}}</option>
+                    {{/if}}
+                  {{/each}}
+
+                </select>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title">Categoria</div>
+                    <div class="item-after"></div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li><div class="item-content">
+              <div class="item-inner">
+                <input id="datePicker" type="text" name="date" value="{{item.day}}/{{item.monthNum}}/{{item.year}}" placeholder="Data" />
+                <div class="item-after"><i class="f7-icons">calendar</i></div>
+              </div>
+            </div>
+          </li>
+            <!-- <li><div class="item-content">
+              <div class="item-inner">
+                <input type="text" name="description" value="" placeholder="Descrição" />
+                <div class="item-after"><i class="f7-icons">info</i></div>
+              </div>
+            </div>
+          </li> -->
+          </ul>
+          <a href="#" class="save-button">Salvar <i class="f7-icons">check</i></a>{{#unless isNubank}}<a href="#" class="remove-button">Excluir <i class="f7-icons">trash</i></a>{{/unless}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/contentWrapper}}
+</template>

@@ -1,0 +1,69 @@
+<template name="login">
+  {{#contentWrapper}}
+    <div class="view login-view">
+      <div class="page">
+        <div class="page-content">
+
+          <div class="content-block">
+            <a href="/nubank" class="button button-big button-nubank"><div class="nu-icon">
+              <img src="img/nu-purple.png" alt="nuBank" /><span>Entrar com nubank</span>
+            </div></a>
+            <div class="hr-sect">ou</div>
+
+          <div class="card">
+            <div class="card-content">
+              <div class="card-content-inner login-box">
+                <div class="credentials">
+                  <form class="login-form">
+
+
+                        <fieldset class="login">
+                           <div class="cpf-field">
+                             <input name="cpf"  maxlength="14" type="tel" placeholder="" required/>
+                             <hr>
+                             <label>cpf</label>
+                           </div>
+                           <div class="password-field">
+                             <input name="password" type="password" placeholder="" required/>
+                             <hr>
+                             <label>senha</label>
+                           </div>
+                           <span class="errormsg validate">CPF ou senha inválidos.</span>
+                           <div class="row">
+                             <div class="col-50">
+                               <a href="#" class="button button-big button-white">registrar</a>
+                             </div>
+                             <div class="col-50">
+                               <a href="#" class="button button-big button-purple button-login">entrar</a>
+                             </div>
+                           </div>
+                         </fieldset>
+
+                        <fieldset class="register">
+                           <div class="password2-field">
+                             <input name="password2" maxlength="14" type="password" placeholder="" required/>
+                             <hr>
+                             <label>senha</label>
+                           </div>
+                           <div class="confirm-field">
+                             <input name="confirm" type="password" placeholder="" required/>
+                             <hr>
+                             <label>confirme</label>
+                           </div>
+                           <span class="errormsg confirm">As senhas são diferentes!</span>
+                           <a href="#" class="button button-big button-purple button-register">registrar</a>
+
+                         </fieldset>
+
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/contentWrapper}}
+</template>

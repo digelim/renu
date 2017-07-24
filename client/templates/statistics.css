@@ -1,0 +1,15 @@
+.swiper-container {
+    height: calc(100% - 269px);
+}
+.swiper-slide {
+    position: relative;
+}
+.swiper-slide img {
+    position: absolute;
+    left:50%;
+    top:37%;
+    max-width: 70%;
+    max-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
